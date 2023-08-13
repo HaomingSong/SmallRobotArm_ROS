@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: smallrobot_description
+    relative_path: urdf/smallrobot.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/smallrobot.srdf
+  CONFIG:
+    author_name: Haoming Song
+    author_email: haoming_song_hitwh@163.com
+    generated_timestamp: 1614612059
