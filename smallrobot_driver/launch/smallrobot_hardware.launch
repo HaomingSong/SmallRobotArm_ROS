@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- smallrobot -->
+  <!-- IP地址 -->
+  <!-- <arg name="smallrobot_ip" default="192.168.31.6" /> -->
+  <arg name="smallrobot_ip" default="192.168.31.131" />
+  <!-- <arg name="smallrobot_ip" default="192.168.31.131" /> -->
+  <!-- 端口 -->
+  <arg name= "smallrobot_port" default="8080"/>
+
+  <node ns="/smallrobot" pkg="smallrobot_driver" type="smallrobot_main" name="smallrobot_driver_node" respawn="false" output="screen">
+  <!--<node ns="/smallrobot" pkg="smallrobot_driver" type="main" name="smallrobot_driver_node" respawn="false">-->
+    <param name="smallrobot_ip" type="string" value="$(arg smallrobot_ip)"/>
+    <param name="smallrobot_port" type="int" value="$(arg smallrobot_port)"/>
+
+  </node>
+</launch>

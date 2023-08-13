@@ -1,0 +1,11 @@
+<launch>
+    <!--tf不能忘-->
+    <include file="$(find smallrobot_description)/launch/smallrobot_description.launch"/>
+    
+    <!--硬件嵌入-->
+    <include file="$(find smallrobot_driver)/launch/smallrobot_hardware.launch"/>
+
+    <!--moveit配置-->
+    <include file="$(find smallrobot_driver)/launch/load_config.launch"/>
+
+</launch>
