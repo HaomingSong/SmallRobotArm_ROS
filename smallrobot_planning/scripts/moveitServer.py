@@ -46,7 +46,7 @@ class MoveIt_Control:
         self.arm.set_max_velocity_scaling_factor(1)
 
         # 机械臂初始姿态
-        self.go_home()
+        # self.go_home()
 
         # # 如果使用robotiq-85夹爪，会初始化夹爪，默认不使用
         # self.is_use_gripper = is_use_gripper
@@ -75,7 +75,7 @@ class MoveIt_Control:
         try:
             print("Test for robot...")
             # self.go_home()
-            self.move_j([1.0, -1.0, 0.0, 0.0, 0.0, 0.0],a=0.5,v=0.5)
+            self.move_j([1.0, -1.0, 1.0, 1.0, 0.0, 0.0],a=0.5,v=0.5)
             # rospy.sleep(2)
             # self.move_p([0.4, 0, 0.4, -np.pi, 0, 0])
             # rospy.sleep(5)
